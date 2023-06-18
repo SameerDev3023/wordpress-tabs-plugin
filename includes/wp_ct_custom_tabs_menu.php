@@ -11,38 +11,13 @@ class Wp_Ct_Admin_menu
         require_once PLUGIN_DIR_PATH . 'admin/ccpw-settings.php';
 
         add_action( 'cmb2_admin_init', 'cmb2_ct_metaboxes' );
-		// add_action('cmb2_save_options-page_fields', array($this, 'Settings_callback2'));
 
     }
     function ws_ct_register_meta_box()
     {
         add_meta_box('ws-ct-shortcode', 'Tabs Shortcode', array($this, 'ws_ct_shortcode_tabs'), 'wp_ct_custom_tabs', 'side', 'high');
     }
-    // public function Settings_callback2()
-    // {		
-    //     $old_api = get_option('ccpw_old_api');			
-         
-    //       $api = get_option('ccpw_options');
-    //     $api = (!isset($api['select_api']) && empty($api['select_api'])) ? "coin_gecko" : $api['select_api'];
-    //     if ($api!=$old_api) {
-    //        $db = new ccpw_database();
-    //        // $db->truncate_table();
-    //         $db->drop_table();
-    //         //$db->create_table();
-    //         delete_transient('ccpw-saved-coindata');
-    //         delete_option('ccpw_data_save');
-    //         $db->create_table();
-    //         $api = get_option('ccpw_options');
-    //         $api = (!isset($api['select_api']) && empty($api['select_api'])) ? "coin_gecko" : $api['select_api'];
-    //         $api_obj = new CCPW_api_data();
 
-    //         $data = ($api == "coin_gecko") ? $api_obj->ccpw_get_coin_gecko_data() : $api_obj->ccpw_get_coin_paprika_data();
-
-    //         update_option('ccpw_old_api',$api);
-
-    //     }
-
-    // }
     function ws_ct_shortcode_tabs()
     {
         $id = get_the_ID();
@@ -76,7 +51,6 @@ class Wp_Ct_Admin_menu
             '↳ Add New Tabs',
             'manage_options',
             'post-new.php?post_type=wp_ct_custom_tabs',
-            // array($this,'ws_ct_submenu_func'),
             false,
             17
         );
