@@ -22,17 +22,15 @@ The Custom Tabs WordPress plugin allows users to create and manage custom tabs w
 3. On this page, you can add, edit, and delete custom tabs.
 4. For each custom tab, you can specify a title and add content using the built-in WordPress editor.
 5. Save your changes.
-6. To display the custom tabs on your website, you can use the `[custom-tabs]` shortcode in your posts or pages.
+6. To display the custom tabs on your website, you can use the `[ct-tabs post-id]` shortcode in your posts or pages.
 
-## Shortcode Parameters
+## Shortcode Usage
 
-The `[custom-tabs]` shortcode supports the following parameters:
+The `[ct-tabs post-id]` shortcode allows you to display the custom tabs based on a specific post ID.
 
-- `title`: Specify a title for the custom tabs section. (Default: "Custom Tabs")
-- `tabs`: Specify the number of tabs to display. (Default: all tabs)
-- `order`: Specify the order in which the tabs should be displayed. Options: `asc` (ascending), `desc` (descending). (Default: "asc")
+- `post-id`: Specify the ID of the post that contains the custom tabs you want to display.
 
-Example usage: `[custom-tabs title="My Tabs" tabs="3" order="desc"]`
+Example usage: `[ct-tabs post-id="123"]`
 
 ## Frequently Asked Questions
 
