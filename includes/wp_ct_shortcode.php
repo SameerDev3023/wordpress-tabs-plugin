@@ -42,11 +42,7 @@ class Ws_Ct_Shortcode
 
         $FontColor = get_post_meta($id,'font_color',true);
 
-        
-
-
-
-
+    
         $htmlOutput = '
         <body class="d-flex justify-content-center align-items-center bg-light">
         <div class="card p-3 shadow" style="max-width: 600px;color:'.$FontColor.';background-color:'.$bgColor.'">
@@ -59,13 +55,13 @@ class Ws_Ct_Shortcode
                 </div>
             </nav>
             <div class="tab-content"  style="background-color:'.$bgColor.'" id="nav-tabContent">
-                <div class="tab-pane" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                <div class="tab-pane active" data-id="'.$id.'" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                     <p>'.$firstContent.'</p>
                 </div>
-                <div class="tab-pane"  style="background-color:'.$bgColor.'" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                <div class="tab-pane"  data-id="'.$id.'" style="background-color:'.$bgColor.'" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
                     <p>'.$secondContent.'</p>
                 </div>
-                <div class="tab-pane"  style="background-color:'.$bgColor.'" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                <div class="tab-pane" data-id="'.$id.'" style="background-color:'.$bgColor.'" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
                     <p>'.$thirdContent.'</p>
                 </div>
             </div>
